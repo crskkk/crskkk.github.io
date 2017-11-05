@@ -19,22 +19,32 @@
 	<body>
 		<header>
 			<h1>
-				Русский в Куэнка
+				Высокая Энергия Русский в Куэнка
 			</h1>
 		</header>
 		<nav>
-			<div id="home"></div>
-			<div id="freight"></div>
-			<div id="machina"></div>
-			<div id="users"></div>
-			<div id="support"></div>
+			<a href="#" id="home"></a>
+			<a href="#" id="solar"></a>
+			<a href="#" id="nuclear"></a>
+			<a href="#" id="economics"></a>
+			<a href="#" id="support"></a>
 		</nav>
 		<article>
-			<section>
-				<pre>Вы не должны это видеть.</pre>
+			<section id="item01">
+				<pre>
+				
+			Вы
+				не 				должны
+					это				видеть.
+				</pre>
 			</section>
-			<section>
-				<pre>Вы не должны это видеть.</pre>
+			<section id="item01">
+				<pre>
+				
+	Вы
+		не 				должны
+			это				видеть.
+				</pre>
 			</section>
 		</article>
 		<aside>
@@ -46,27 +56,27 @@
 <script type="text/jsx">
 	const strings_EN = {
 		home: 		'Home',
-		freight:	'Freight',
-		machina:	'Machine',
-		users:		'Users',
+		solar:		'Solar',
+		nuclear:	'Nuclear',
+		economics:	'Economics',
 		support:	'Support',
 	};
 	
 	const strings_ES = {
 		home: 		'Inicio',
-		freight:	'Carga',
-		machina:	'Máquina',
-		users:		'Usuarios',
-		support:	'Apoyo',
+		solar:		'Solar',
+		nuclear:	'Nuclear',
+		economics:	'La Economía',
+		support:	'Support',
 	};
 	
 	const strings = {
 	//const strings_RU = {
-		home: 		'Дом',
-		freight:	'Фрахт',
-		machina:	'Мажина',
-		users:		'Пользователь',
-		support:	'Oпоры'
+		home: 		'ДОМ',
+		solar:		'Солнечная',
+		nuclear:	'Атомная',
+		economics:	'Энергоэкономика',
+		support:	'Поддержка',
 	};			
 	
 	/*
@@ -76,30 +86,30 @@
 	*/
 	
 	ReactDOM.render(
-		<p>{strings.home}</p>,
+		<div>{strings.home}</div>,
 		document.getElementById('home')
 	);
 	ReactDOM.render(
-		<p>{strings.freight}</p>,
-		document.getElementById('freight')
+		<div>{strings.solar}</div>,
+		document.getElementById('solar')
 	);
 	ReactDOM.render(
-		<p>{strings.machina}</p>,
-		document.getElementById('machina')
+		<div>{strings.nuclear}</div>,
+		document.getElementById('nuclear')
 	);
 	ReactDOM.render(
-		<p>{strings.users}</p>,
-		document.getElementById('users')
+		<div>{strings.economics}</div>,
+		document.getElementById('economics')
 	);
 	ReactDOM.render(
-		<p>{strings.support}</p>,
+		<div>{strings.support}</div>,
 		document.getElementById('support')
 	);
 </script>
 <style>
 * {
 	font-family: 'PT Sans', sans-serif;
-	background-color: hsla(212, 100%, 43%, .1);
+	background-color: hsla(212, 100%, 43%, .05);
 	
 	box-sizing: border-box;
 	border: 2px;
@@ -110,12 +120,12 @@
 body {
 	display: grid;
 	
-	grid-template-columns: 87px 2fr 1fr;
+	grid-template-columns: minmax(7%,87px) 2fr 1fr;
 	grid-template-rows: auto auto 1fr auto;
 	
 	grid-template-areas:
 		". header header"
-		". nav ."
+		". nav nav"
 		". article aside"
 		"footer footer footer";
 }
@@ -130,28 +140,31 @@ header {
 header h1 {
 	padding: 0px;
 	margin: 0px;
+	
+	max-height: 1.3em;
+	overflow-x: hidden;
 }
 
 nav {
 	grid-area: nav;
-	
-	display: grid;
-	grid-template-columns: 20%;
-	grid-auto-flow: column;
+}
+
+nav a {
+	font-size: 1.5em;
+}
+nav a:visited {
+    color: black;
+}
+
+nav a:hover {
+    color: yellow;
 }
 
 nav div {
-	padding: 0 5px 0 auto;
+	display: inline-block;
 	border-bottom: thick solid hsla(51, 100%, 50%, 1);
 	
-	justify-self: stretch;
-
-	grid-columns: 1 / 4;
-}
-
-nav div p {
-	padding-left: 5px;
-	padding-right 5px;
+	padding: 0 5px 1px 5px;
 }
 
 article {
@@ -161,6 +174,8 @@ article {
 	
 	padding: 0px;
 	margin: 0px;
+	
+	margin-bottom: .9em;
 }
 
 article section {
@@ -175,7 +190,8 @@ aside {
 	align-items: center;
 	
 	border: 5px solid hsla(51, 100%, 50%, 1);
-	
+	margin-bottom: 2em;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -194,16 +210,16 @@ footer {
 	bottom: 0;
 	left: 0;
 	
+	margin-bottom: -2px;
+	margin-left: 134px;
+	
 	font-size: 12px;
 	
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: left;
 }
 
-p {
-	padding: 0px;
-	margin: 0px;
-}
+footer
 
 </style>
