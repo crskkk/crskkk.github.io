@@ -3,11 +3,10 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-		<!-- Google Fonts + Material -->
+		<!-- Google Font + Material + Icons -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans"> 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 		
 		<!-- React -->
 		<script src="https://fb.me/react-0.14.6.js"></script>
@@ -23,33 +22,35 @@
 			</h1>
 		</header>
 		<nav>
-			<a href="#" id="home">Inicio</a>
-			<a href="#" id="solar"></a>
-			<a href="#" id="nuclear"></a>
-			<a href="#" id="economics"></a>
-			<a href="#" id="support"></a>
+			<a id="home"></a>
+			<a id="solar"></a>
+			<a id="nuclear"></a>
+			<a id="economics"></a>
+			<a id="support"></a>
 		</nav>
-		<article>
-			<section id="item01">
-				<pre>
-				
-			Вы
-				не 				должны
-					это				видеть.
-				</pre>
-			</section>
-			<section id="item02">
-				<pre>
-				
-	Вы
-		не 				должны
-			это				видеть.
-				</pre>
-			</section>
-		</article>
-		<aside>
-			<div>Дайте нам деньги или ожидайте, и объявите здесь в ближайшее время!</div>
-		</aside>
+		<div id="torso">
+			<article>
+				<section id="item01">
+					<pre>
+					
+				Вы
+					не 				должны
+						это				видеть.
+					</pre>
+				</section>
+				<section id="item02">
+					<pre>
+					
+		Вы
+			не 				должны
+				это				видеть.
+					</pre>
+				</section>
+			</article>
+			<aside>
+				<div>Дайте нам деньги или ожидайте, и объявите здесь в ближайшее время!</div>
+			</aside>
+		</div>
 		<footer>All Rights Reversed</footer>
 	</body>
 </html>
@@ -78,7 +79,7 @@
 		economics:	'Энергоэкономика',
 		support:	'Поддержка',
 	};			
-	
+		
 	/*
 	var idiom = Math.random();
 	var cutoff = 1/3;			
@@ -120,14 +121,14 @@
 body {
 	display: grid;
 	
-	grid-template-columns: minmax(7%,87px) 2fr 1fr;
+	grid-template-columns: minmax(7%,87px) 1fr;
 	grid-template-rows: auto auto 1fr auto;
 	
 	grid-template-areas:
-		". header header"
-		". nav nav"
-		". article aside"
-		"footer footer footer";
+		".		header"
+		".		nav"
+		".		torso"
+		"footer	footer";
 }
 
 header {
@@ -156,7 +157,7 @@ header h1:hover {
 		hsla(0, 100%, 53%, 1) 67%
 	);
 	-webkit-background-clip: text;
-	        background-clip: text;	
+	background-clip: text;	
 }
 
 nav {
@@ -171,17 +172,17 @@ nav a {
 }
 
 nav a:visited {
-color: black;
+	color: black;
 }
 
-nav div {
+nav a div {
 	display: inline-block;
 	border-bottom: thick solid hsla(51, 100%, 50%, 1);
 	
 	padding: 0 5px 1px 5px;
 }
 
-nav div:hover {
+nav a div:hover {
 	border-bottom: thick solid transparent;
 	border-image: linear-gradient(
 		150deg,
@@ -203,12 +204,16 @@ nav div:hover {
 		hsla(0, 100%, 53%, 1) 67%
 	);
 	-webkit-background-clip: text;
-	        background-clip: text;
+	background-clip: text;
+}
+
+div#torso {
+	grid-area: torso;
+	display: flex;
 }
 
 article {
 	grid-area: article;
-	
 	border: 5px solid hsla(51, 100%, 50%, 1);
 	
 	padding: 0px;
