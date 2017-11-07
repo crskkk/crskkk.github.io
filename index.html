@@ -37,15 +37,10 @@
 			</aside>
 			<article>
 				<section id="item01">
-					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 				</section>
 				<section id="item02">
-					<pre>
-					
-		Вы
-			не 				должны
-				это				видеть.
-					</pre>
+				<pre>
+				</pre>
 				</section>
 			</article>
 		</div>
@@ -221,8 +216,12 @@ footer {
 	justify-content: left;
 }
 
+img {
+	width: 100%;
+	
+}
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
 	#torso {
 		display: grid;
 		grid-template-columns: 2fr 1fr;
@@ -272,7 +271,7 @@ footer {
 	*/
 	
 	ReactDOM.render(
-		<div class="clipper">{strings.home}</div>,
+		<div>{strings.home}</div>,
 		document.getElementById('home')
 	);
 	ReactDOM.render(
@@ -291,4 +290,33 @@ footer {
 		<div>{strings.support}</div>,
 		document.getElementById('support')
 	);
+	
+	const friends = [
+		{
+			title: "Solar Article",
+			src: "https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-monkeyweirdo.jpg"
+		},
+		{
+			title: "Nuclear Article",
+			src: "https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-earnestfrog.jpg"
+		},
+		{
+			title: "Economics Article",
+			src: "https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-alpaca.jpg"
+		}
+	];
+
+	class Friend extends React.Component{
+		render(){
+			var friend = friends[0];
+			return(
+				<div>
+					<h1>{friend.title}</h1>
+					<img src={friend.src} />
+				</div>
+			);
+		}
+	};
+
+	ReactDOM.render(<Friend />,document.getElementById('item01'));
 </script>

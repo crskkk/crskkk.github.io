@@ -8,7 +8,7 @@
 	@media
 
 2017-11-06
-	ATTEMPTIN  TO PAPER-DIGITAL NOTE SYNC
+🔘	DOCUMENT THE HOLE THING SUNDAY
 🔘	Menu items shrink to icon
 	React onClick
 	Form
@@ -21,6 +21,8 @@
 	All I enjoy is making you accomplish really hard things.
 	When something is no longer difficult for you, I stop enjoying it. I will push you further.
 	On whose money am I allowed to make mistakes?
+	How to sound like an ignorant, to yourself, a few days later
+	Competition Breeds Destruction
 
 	2017-11-05
 	WORKING ON PROJECT: Double Blind
