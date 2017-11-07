@@ -1,5 +1,4 @@
-🔘	MÑ
-	OL OR
+🔘	OL OR
 	MNL
 	LWMN
 	MNx
@@ -15,6 +14,7 @@
 	Form
 	3 Little flags (Notification)
 	SQL
+	CSS img: {max-width: 100%;}
 	
 	YOU'RE NOTHING. THEREFORE. ASOs 
 🔘	The great reveal: she's not beautiful, and she's no ugly (no mention of beauty).

@@ -32,6 +32,9 @@
 			<a id="support"></a>
 		</nav>
 		<div id="torso">
+			<aside>
+				<div>Дайте нам деньги или ожидайте, и объявите здесь в ближайшее время!</div>
+			</aside>
 			<article>
 				<section id="item01">
 					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
@@ -45,9 +48,6 @@
 					</pre>
 				</section>
 			</article>
-			<aside>
-				<div>Дайте нам деньги или ожидайте, и объявите здесь в ближайшее время!</div>
-			</aside>
 		</div>
 		<footer>All Rights Reversed</footer>
 	</body>
@@ -157,13 +157,27 @@ nav a div:hover {
 }
 
 div#torso {
-	grid-area: torso;
+	grid-area: torso;	
+}
+
+aside {
+	width: 100%;
 	
-	display: flex;	
+	border: 5px solid hsla(51, 100%, 50%, 1);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+aside div {
+	margin: 0 11px 0 11px;
 }
 
 article {
-	grid-area: article;
+	width: 100%;
+	
 	border: 5px solid hsla(51, 100%, 50%, 1);
 	
 	padding: 0px;
@@ -176,9 +190,6 @@ article section {
 	border: thick solid hsla(51, 100%, 61%, 1);
 }
 
-article section {
-	border: thick solid hsla(51, 100%, 61%, 1);
-}
 article section:hover {	
 	border-bottom: thick solid transparent;
 	border-image: linear-gradient(
@@ -190,22 +201,6 @@ article section:hover {
 		hsla(0, 100%, 53%, 1) 67%
 		);
 	border-image-slice: 1;
-}
-
-aside {
-	grid-area: aside;
-	
-	border: 5px solid hsla(51, 100%, 50%, 1);
-	margin-bottom: 2em;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-}
-
-aside div {
-	margin: 0 11px 0 11px;
 }
 
 footer {
@@ -224,6 +219,23 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: left;
+}
+
+
+@media only screen and (min-width: 600px) {
+	#torso {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-template-areas:
+			"article aside"
+	}
+	aside {
+		grid-area: aside;
+		margin-bottom: 2em;
+	}
+	article {
+		grid-area: article;
+	}
 }
 
 </style>
