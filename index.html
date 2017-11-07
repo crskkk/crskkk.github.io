@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Defines UTF-8 Support, Viewport for RWD -->
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 		<!-- Google Font + Material + Icons -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans"> 
@@ -31,12 +34,7 @@
 		<div id="torso">
 			<article>
 				<section id="item01">
-					<pre>
-					
-				Вы
-					не 				должны
-						это				видеть.
-					</pre>
+					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 				</section>
 				<section id="item02">
 					<pre>
@@ -54,59 +52,6 @@
 		<footer>All Rights Reversed</footer>
 	</body>
 </html>
-<script type="text/jsx">
-	const strings_EN = {
-		home: 		'Home',
-		solar:		'Solar',
-		nuclear:	'Nuclear',
-		economics:	'Economics',
-		support:	'Support',
-	};
-	
-	const strings_ES = {
-		home: 		'Inicio',
-		solar:		'Solar',
-		nuclear:	'Nuclear',
-		economics:	'La Economía',
-		support:	'Support',
-	};
-	
-	const strings = {
-	//const strings_RU = {
-		home: 		'ДОМ',
-		solar:		'Солнечная',
-		nuclear:	'Атомная',
-		economics:	'Энергоэкономика',
-		support:	'Поддержка',
-	};			
-		
-	/*
-	var idiom = Math.random();
-	var cutoff = 1/3;			
-	var strings = (idiom>cutoff)?(idiom>2*cutoff)? strings_EN : strings_ES : strings_RU;
-	*/
-	
-	ReactDOM.render(
-		<div class="clipper">{strings.home}</div>,
-		document.getElementById('home')
-	);
-	ReactDOM.render(
-		<div>{strings.solar}</div>,
-		document.getElementById('solar')
-	);
-	ReactDOM.render(
-		<div>{strings.nuclear}</div>,
-		document.getElementById('nuclear')
-	);
-	ReactDOM.render(
-		<div>{strings.economics}</div>,
-		document.getElementById('economics')
-	);
-	ReactDOM.render(
-		<div>{strings.support}</div>,
-		document.getElementById('support')
-	);
-</script>
 <style>
 * {
 	font-family: 'PT Sans', sans-serif;
@@ -146,7 +91,7 @@ header h1 {
 	padding: 0px;
 	margin: 0px;
 	
-	max-height: 1.3em;
+	max-height: 1.4em;
 	overflow-x: hidden;
 }
 
@@ -282,3 +227,56 @@ footer {
 }
 
 </style>
+<script type="text/jsx">
+	const strings_EN = {
+		home: 		'Home',
+		solar:		'Solar',
+		nuclear:	'Nuclear',
+		economics:	'Economics',
+		support:	'Support',
+	};
+	
+	const strings_ES = {
+		home: 		'Inicio',
+		solar:		'Solar',
+		nuclear:	'Nuclear',
+		economics:	'La Economía',
+		support:	'Support',
+	};
+	
+	const strings = {
+	//const strings_RU = {
+		home: 		'ДОМ',
+		solar:		'Солнечная',
+		nuclear:	'Атомная',
+		economics:	'Энергоэкономика',
+		support:	'Поддержка',
+	};			
+		
+	/*
+	var idiom = Math.random();
+	var cutoff = 1/3;			
+	var strings = (idiom>cutoff)?(idiom>2*cutoff)? strings_EN : strings_ES : strings_RU;
+	*/
+	
+	ReactDOM.render(
+		<div class="clipper">{strings.home}</div>,
+		document.getElementById('home')
+	);
+	ReactDOM.render(
+		<div>{strings.solar}</div>,
+		document.getElementById('solar')
+	);
+	ReactDOM.render(
+		<div>{strings.nuclear}</div>,
+		document.getElementById('nuclear')
+	);
+	ReactDOM.render(
+		<div>{strings.economics}</div>,
+		document.getElementById('economics')
+	);
+	ReactDOM.render(
+		<div>{strings.support}</div>,
+		document.getElementById('support')
+	);
+</script>
