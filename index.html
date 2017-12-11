@@ -62,7 +62,7 @@
 body {
 	display: grid;
 	
-	grid-template-columns: 43px 1fr;
+	grid-template-columns: 87px 1fr;
 	grid-template-rows: auto auto 1fr auto;
 	
 	grid-template-areas:
@@ -273,12 +273,13 @@ img {
 	var idiom = Math.random();
 	var cutoff = 1/3;			
 	var strings = (idiom>cutoff)?(idiom>2*cutoff)? strings_EN : strings_ES : strings_RU;
-	*/
 	
 	ReactDOM.render(
 		<div>{strings.home}</div>,
 		document.getElementById('home')
 	);
+	*/
+
 	ReactDOM.render(
 		<div>{strings.solar}</div>,
 		document.getElementById('solar')
