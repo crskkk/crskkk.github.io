@@ -248,9 +248,9 @@ img {
 	// const strings_EN = {
 		home: 		'Home',
 		latest:		'The Latest',
-		consulting:	'Industry Analysis',
-		consulting:	'Consulting',
-		contact:	'Contact Us',
+		analysis:	'Industry Analysis',
+		tutorials:	'Startup Tutorials',
+		consulting:	'Consult With Us',
 	};
 	
 	const strings_ES = {
@@ -289,29 +289,33 @@ img {
 	);
 
 	ReactDOM.render(
-		<div>{strings.solar}</div>,
+		<div>{strings.latest}</div>,
 		document.getElementById('latest')
 	);
 	ReactDOM.render(
-		<div>{strings.nuclear}</div>,
+		<div>{strings.analysis}</div>,
 		document.getElementById('analysis')
 	);
 	ReactDOM.render(
 		<div>{strings.economics}</div>,
+		document.getElementById('economics')
+	);
+	ReactDOM.render(
+		<div>{strings.tutorials}</div>,
 		document.getElementById('tutorials')
 	);
 	ReactDOM.render(
-		<div>{strings.support}</div>,
+		<div>{strings.consulting}</div>,
 		document.getElementById('consulting')
 	);
-	
+
 	const friends = [
 		{
 			title: "BREAKING NEWS!",
 			src: "https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-monkeyweirdo.jpg"
 		},
 		{
-			title: "Learning Article",
+			title: "Latest News Article",
 			src: "https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-earnestfrog.jpg"
 		},
 		{
